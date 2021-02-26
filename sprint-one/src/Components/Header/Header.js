@@ -1,16 +1,13 @@
 import "./Header.sass";
 // import React, { Component } from 'react';
-import Logo from "./Logo";
-import Search from "./Search";
-import Upload from "./Upload";
+import Nav from "./Nav";
 
 function Header() {
-        return (
-            <div>
-                <Logo />
-                <Search />
-                <Upload />
-            </div>
+    return (
+        <header>
+            <Nav />
+        </header>
+    
         );
 }
 

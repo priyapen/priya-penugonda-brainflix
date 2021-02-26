@@ -5,13 +5,12 @@ import uploadicon from '../../Assets/Icons/Icon-upload.svg';
 const Upload = () => {
     return (
         <div>
-            <form action="">
-                
+            {/* <form action=""> */}
+            <img src={uploadicon} alt="Upload button img" />
                 <input type="file" id="myFile" name="filename">
-                    {/* <img src={uploadicon} alt="Upload button img" /> */}
                 </input>
                 {/* <input type="submit"> */}
-            </form>
+            {/* </form> */}
         </div>
     );
 }
