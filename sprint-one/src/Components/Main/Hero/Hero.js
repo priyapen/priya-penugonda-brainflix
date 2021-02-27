@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import videodetails from "../../../Assets/Data/video-details.json";
+import videodetails from "../../../data/video-details.json";
 
 
 class Hero extends Component {

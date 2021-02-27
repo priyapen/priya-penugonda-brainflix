@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import Logo from "./Logo";
 import Search from "./Search";
 import Upload from "./Upload";

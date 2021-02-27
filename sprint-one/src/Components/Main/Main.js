@@ -8,9 +8,9 @@ import HeroDetails from './HeroDetails/HeroDetails'
 
 
 class Main extends Component {
-    state = {
-        videodetails: videodetails
-    }
+    // state = {
+    //     videodetails: videodetails
+    // }
   
 
     render() {
@@ -18,8 +18,8 @@ class Main extends Component {
         return (
             <div>
             <Hero />
-                <HeroDetails dataFromMain={this.state.videodetails} />
-                <AsideList dataFromMain={this.state.videodetails} />
+                <HeroDetails dataFromMain={this.props.videodetails} />
+                <AsideList dataFromMain={this.props.videodetails} />
         </div>
         );
     }

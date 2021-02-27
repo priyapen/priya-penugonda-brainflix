@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import HeroHeading from './HeroHeading';
 import HeroDescription from './HeroDescription';
 import HeroCommentInput from './HeroCommentInput';

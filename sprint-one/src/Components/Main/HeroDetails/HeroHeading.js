@@ -22,7 +22,7 @@
 
 
 import React, { Component } from 'react';
-import props from 'prop-types';
+
 import Views from '../../../Assets/Icons/Icon-views.svg';
 import Heart from '../../../Assets/Icons/Icon-likes.svg';
 
@@ -37,9 +37,9 @@ class HeroHeading extends Component {
             < section className = "hero__heading-section" >
                 <h1 className="hero__title">{this.props.videodetails[0].title}</h1>
                 <h2 className="hero__channel">By {this.props.videodetails[0].channel}</h2>
-                <img src={Views} attr="total views for the video" className="hero__viewsicon"/>
+                <img src={Views} alt="total views for the video" className="hero__viewsicon"/>
                 <p className="hero__views">{this.props.videodetails[0].views}</p>
-                <img src={Heart} attr="total likes for the video" className="hero__likesicon"/>
+                <img src={Heart} alt="total likes for the video" className="hero__likesicon"/>
                 <p className="hero__likes">{this.props.videodetails[0].likes}</p>
              </section>
         );
