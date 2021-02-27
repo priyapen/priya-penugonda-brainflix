@@ -1,30 +1,29 @@
 import React, { Component } from 'react';
-import videodetails from "../../../data/video-details.json";
 
 
 class Hero extends Component {
-    state = {
-        videodetails: videodetails,
-        // videotitle: videodetails.title,
-        // videochannel: videodetails.channel,
-        // videoimage: videodetails.image,
-        // videodescription: videodetails.description,
-        // videoviews: videodetails.views,
-        // videolikes: videodetails.likes,
-        // videoduration: videodetails.duration,
-        // videolink: videodetails.video,
-        // videotimestamp: videodetails.timestamp,
-        // videocomments: videodetails.comments
-    }
+    // state = {
+    //     videodetails: videodetails,
+    //     // videotitle: videodetails.title,
+    //     // videochannel: videodetails.channel,
+    //     // videoimage: videodetails.image,
+    //     // videodescription: videodetails.description,
+    //     // videoviews: videodetails.views,
+    //     // videolikes: videodetails.likes,
+    //     // videoduration: videodetails.duration,
+    //     // videolink: videodetails.video,
+    //     // videotimestamp: videodetails.timestamp,
+    //     // videocomments: videodetails.comments
+    // }
 
     
     render() {
-        console.log(this.state.videodetails);
-        console.log("hello");
+        // console.log(this.props.videodetails);
+        // console.log("hello");
         return (
             <div>
 
-                <video poster={this.state.videodetails[0].image} controls="controls" 
+                <video poster={this.props.dataFromMain[0].image} controls="controls" 
                      width="400" height="300" preload="metadata">
                     
                     

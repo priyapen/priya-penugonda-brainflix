@@ -16,7 +16,7 @@ class AsideList extends Component {
                     {
                         videolist.map(video => {
                             console.log(video.image);
-                            return <AsideListItem Key={video.id} videolistitem={video} imgsrc={video.image} channel={video.channel} title={video.title}/>
+                            return <AsideListItem key={video.id} id={video.id} videolistitem={video} imgsrc={video.image} channel={video.channel} title={video.title} handleclick={this.props.handleclick}/>
 
                         })
                     }

@@ -8,8 +8,8 @@ class HeroCommPubl extends Component {
             <ul className="publ__commblock">
                 {
                     this.props.videodetails[0].comments.map(element => {
-                        console.log(element.name);
-                        console.log(element.id);
+                        // console.log(element.name);
+                        // console.log(element.id);
                             return <HeroUserComment key={element.id} name={element.name} comment={element.comment} time={element.timestamp} />
                     })
                 }   
