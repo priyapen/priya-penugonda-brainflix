@@ -1,10 +1,10 @@
-import "./Header.sass";
+import "./Header.scss";
 // import React, { Component } from 'react';
 import Nav from "./Nav";
 
 function Header() {
     return (
-        <header>
+        <header className="header">
             <Nav />
         </header>
     

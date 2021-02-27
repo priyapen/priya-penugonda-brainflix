@@ -25,24 +25,25 @@
   font-style: normal;
 }
 
-@mixin global {
-  html {
-    box-sizing: border-box;
-    font-family: $fontstack;
-    color: $global;
-    font-size: 62.5%;
-  }
+html {
+  box-sizing: border-box;
+  font-family: $fontstack;
+  color: $global;
+  font-size: 62.5%;
+}
 
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
-  body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
+body {
+  margin: 0;
+  padding: 1.6rem 0;
+  width: 100%;
+  @include tablet {
+    padding: 2.4rem 0;
   }
 }
 
@@ -126,6 +127,10 @@ li {
   @include tablet {
     width: 16rem;
     margin-left: auto;
+  }
+
+  &::before {
+    content: url("../Assets/Icons/Icon-upload.svg");
   }
 }
 

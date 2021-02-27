@@ -4,7 +4,7 @@ import './partials/_global.scss';
 import Header from './Components/Header/Header';
 import Main from './Components/Main/Main';
 import videodetails from './data/video-details.json';
-import Hero from './Components/Main/Hero/Hero';
+// import Hero from './Components/Main/Hero/Hero';
 
 
 class App extends Component {
@@ -18,6 +18,7 @@ class App extends Component {
     event.preventDefault();
     const clickedVideo = event.target.id;
     console.log("i've been clicked", clickedVideo)
+
     const newArray = this.state.videodetails.filter((video, i) => {
       console.log("this.state.currentHeroVideo", this.state.currentHeroVideo)
       if (video.id !== this.state.currentHeroVideo) {

@@ -32,7 +32,7 @@ class HeroHeading extends Component {
     //     videodetails:this.props.videodetails
     // }
     render() {
-        console.log(this.props.videodetails);
+        // console.log(this.props.videodetails);
         return (
             < section className = "hero__heading-section" >
                 <h1 className="hero__title">{this.props.videodetails.title}</h1>

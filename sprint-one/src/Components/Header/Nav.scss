@@ -4,12 +4,23 @@
 
 .nav {
   display: flex;
+  flex-direction: column;
 
   &__userimage-block {
     @extend %userimageblock;
+    margin-left: 1.6rem;
   }
 
   &__userimg {
     @extend %userimg;
+  }
+
+  &__logo {
+    height: 2.8rem;
+  }
+
+  &__search {
+    width: 100%;
+    line-height: 2rem;
   }
 }

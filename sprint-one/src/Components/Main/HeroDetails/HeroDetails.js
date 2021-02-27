@@ -8,7 +8,7 @@ import HeroCommPubl from './HeroCommPubl';
 class HeroDetails extends Component {
     
     render() {
-        console.log(this.props.videodetailslist);
+        // console.log(this.props.videodetailslist);
         return (
             <div>
                 <HeroHeading videodetails={this.props.videodetailslist} />

@@ -11,7 +11,7 @@ function Hero(props) {
     //     }
     // })
 
-    console.log("hello hero", playVideo);
+    // console.log("hello hero", playVideo);
     
         return (
             <div>
