@@ -8,13 +8,13 @@ import HeroCommPubl from './HeroCommPubl';
 class HeroDetails extends Component {
     
     render() {
-        console.log(this.props.videodetails);
+        console.log(this.props.videodetailslist);
         return (
             <div>
-                <HeroHeading videodetails={this.props.dataFromMain} />
-                <HeroDescription videodetails={this.props.dataFromMain} />
-                <HeroCommentInput videodetails={this.props.dataFromMain} />
-                <HeroCommPubl videodetails={this.props.dataFromMain} />
+                <HeroHeading videodetails={this.props.videodetailslist} />
+                <HeroDescription videodetails={this.props.videodetailslist} />
+                <HeroCommentInput videodetails={this.props.videodetailslist} />
+                <HeroCommPubl videodetails={this.props.videodetailslist} />
             </div>
         );
     }

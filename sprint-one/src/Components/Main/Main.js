@@ -8,18 +8,15 @@ import HeroDetails from './HeroDetails/HeroDetails'
 
 
 function Main(props) {
-    // state = {
-    //     videodetails: videodetails
-    // }
-  
-
-    
+ 
         // console.log(videodetails);
         return (
             <div>
-                <Hero dataFromMain={props.videodetails}/>
-                <HeroDetails dataFromMain={props.videodetails} />
-                <AsideList dataFromMain={props.videodetails} handleclick={props.handleclick}/>
+                <Hero dataFromMain={props.currentherovideoid}
+                    videodetailslist={props.currentHeroObject} />
+                
+                <HeroDetails dataFromMain={props.currentHeroObject} videodetailslist={props.currentHeroObject} />
+                <AsideList dataFromMain={props.videodetails} handleclick={props.handleclick} videodetailslist={props.currentHeroObject}/>
         </div>
         );
 
