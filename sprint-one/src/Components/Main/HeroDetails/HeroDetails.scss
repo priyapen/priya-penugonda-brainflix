@@ -122,7 +122,10 @@
     padding-top: 1.8rem;
     margin-right: 2rem;
     @include tablet {
+      align-self: self-end;
+      padding-bottom: 2.4rem;
       display: inline-block;
+      vertical-align: middle;
     }
   }
 
@@ -166,11 +169,11 @@
   &__form {
     @include tablet {
       display: flex;
+      //   align-items: flex-end;
     }
   }
 
   &__commenttextinput {
-    height: 4.8rem;
     height: 9.6rem;
     width: 22.4rem;
     resize: none;
@@ -184,6 +187,12 @@
     padding: 1.6rem;
     @include tablet {
       width: 44rem;
+      height: 4.8rem;
+      padding: 1rem;
+      margin-right: 1.6rem;
+    }
+    @include desktop {
+      width: 43.6rem;
     }
   }
 
