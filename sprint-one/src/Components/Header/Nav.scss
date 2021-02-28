@@ -25,17 +25,27 @@
   }
 
   &__search {
+    background: url("../../Assets/Icons/Icon-search.svg") no-repeat;
+    padding: 1rem;
     width: 100%;
     line-height: 4rem;
     border-radius: 4px;
     border: 1px solid $secondary-accent;
     height: 4.8rem;
+    background-position: left;
+    background-origin: content-box;
+    text-indent: 2rem;
     @include tablet {
       width: 30%;
       line-height: 4.8rem;
       margin-left: auto;
       margin-right: 2.4rem;
     }
+  }
+
+  &__search:focus {
+    border: 1px solid $global-button;
+    outline: none;
   }
 
   &__btnimg {
@@ -61,5 +71,10 @@
     @include desktop {
       margin-right: 2.4rem;
     }
+  }
+
+  &__upload:hover {
+    background-color: $global-hover;
+    transition: all 1s linear;
   }
 }

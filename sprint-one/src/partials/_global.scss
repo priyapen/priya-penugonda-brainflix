@@ -150,7 +150,7 @@ a {
   }
 }
 
-%button:hover {
+%button_hover {
   background-color: $global-button;
 }
 
@@ -166,8 +166,17 @@ a {
 
 ::placeholder {
   @include para_comments;
+  font-size: 1.4rem;
+  color: $global;
+  display: flex;
+  align-items: center;
   font-family: $fontstack;
   color: $global;
+  padding-left: 1rem;
+  vertical-align: middle;
+  @include tablet {
+    line-height: 2.6rem;
+  }
 }
 
 // %userimageblock {

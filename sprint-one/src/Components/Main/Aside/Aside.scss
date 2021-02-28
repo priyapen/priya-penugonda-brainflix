@@ -4,6 +4,14 @@
 
 .video {
   @extend %wrapper;
+  @include tablet {
+    width: 35rem;
+    margin: 0;
+  }
+  @include desktop {
+    width: 32rem;
+    padding: 0;
+  }
 
   &__section-title {
     @include subheader;
@@ -11,12 +19,11 @@
     margin: 4rem 0;
     text-transform: uppercase;
     @include tablet {
-      padding: 4.4rem 0 5.4rem 0;
-      margin: 0;
+      margin: 4rem 0;
     }
-    @include desktop {
-      padding: 4.8rem 0 6.4rem 0;
-    }
+    // @include desktop {
+    //   padding: 4.8rem 0 6.4rem 0;
+    // }
   }
 
   &__listitem {
@@ -43,6 +50,14 @@
     height: 100%;
   }
 
+  &__titlechan-block {
+    max-height: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: inherit;
+    justify-content: space-evenly;
+  }
+
   &__title {
     @include para_comments;
     margin: 0;
@@ -56,12 +71,16 @@
     // -webkit-box-orient: vertical;
     // text-overflow: ellipsis;
     @include tablet {
-      margin-right: 1.2rem;
+      // margin-right: 1.2rem;
+      padding-bottom: 1rem;
     }
   }
 
   &__channel {
     @include para_comments;
     font-weight: 300;
+    @include tablet {
+      font-size: 1.2rem;
+    }
   }
 }
