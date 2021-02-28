@@ -14,9 +14,11 @@ class AsideList extends Component {
         // console.log(this.videolist.at(0));
 
         return (
-            <div>
-                <ul>
-                    <li><h2>Next Video</h2></li>
+                <ul className="video">
+                    <li>
+                        <h2 className="video__section-title">Next Video</h2>
+                    </li>
+                
                     {
                     
                         // console.log(!videolist.at(0))
@@ -35,7 +37,6 @@ class AsideList extends Component {
                         })
                     }                  
                 </ul>
-            </div>
         );
     }
 }

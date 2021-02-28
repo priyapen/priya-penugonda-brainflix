@@ -1,23 +1,27 @@
 import React, { Component } from 'react';
 
 
-class HeroUserComment extends Component {
-    render() {
-        // console.log(this.props.name);
+function HeroUserComment(props) {
+    const commentdate = new Date(props.time).toLocaleDateString('en-US');
         return (
-            <>
-                <li>
-                {this.props.name}
+              <ul className="publ__comment" id={props.id}>
+                <li className="publ__imageblock">
+                    <img className="publ__img"></img>
                 </li>
-                <li>
-                {this.props.time}
+                <li className="publ__content">
+                    <li className="publ__nametime">
+                        <li className="publ__name">
+                        {props.name}
+                        </li>
+                        <li className="publ__date">{commentdate}
+                        </li>
+                    </li>
+                    <li className="publ__text">   
+                    {props.comment}
+                    </li>
                 </li>
-                <li>   
-                {this.props.comment}
-                </li>
-            </>
+            </ul>
         );
-    }
 }
 
 
