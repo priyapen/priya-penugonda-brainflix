@@ -4,9 +4,9 @@ import "./Nav.scss";
 
 const Userimg = () => {
     return (
-        <div className="nav__userimage-block">
+        // <div className="nav__userimage-block">
             <img src={userimg} alt="" className="nav__userimg"/>
-        </div>
+        // {/* </div> */}
     );
 }
 

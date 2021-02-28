@@ -11,13 +11,13 @@ function Main(props) {
  
         // console.log(videodetails);
         return (
-            <div>
+            <main className="main">
                 <Hero dataFromMain={props.currentherovideoid}
                     videodetailslist={props.currentHeroObject} />
                 
                 <HeroDetails dataFromMain={props.currentHeroObject} videodetailslist={props.currentHeroObject} />
                 <AsideList dataFromMain={props.videodetails} handleclick={props.handleclick} videodetailslist={props.currentHeroObject}/>
-        </div>
+            </main>
         );
 
 }

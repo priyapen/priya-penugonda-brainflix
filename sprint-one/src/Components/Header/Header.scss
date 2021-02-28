@@ -1,7 +1,13 @@
-@use './partials/global' as *;
-@use './partials/mixins' as *;
-@use './partials/variables' as *;
+@import "../../partials/global";
+@import "../../partials/mixins";
+@import "../../partials/variables";
 
 .header {
   @extend %wrapper;
+  height: 16.9rem;
+  @include tablet {
+    height: 8rem;
+    padding-top: 0;
+    padding-bottom: 1.6rem;
+  }
 }

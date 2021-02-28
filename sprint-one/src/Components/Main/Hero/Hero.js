@@ -1,4 +1,5 @@
 import React from 'react';
+import './Hero.scss';
 
 
 function Hero(props) {
@@ -14,22 +15,18 @@ function Hero(props) {
     // console.log("hello hero", playVideo);
     
         return (
-            <div>
+            <section className="hero__video-blck">
                 
                 <video poster={playVideo.image} controls="controls" 
-                     width="400" height="300" preload="metadata">
-
+                     className="hero__video">
+{/* preload="metadata"  width="400" height="300" */}
 	            </video>
     
-            </div>
+            </section>
         );
 }
 
 // if (video.id === props.dataFromMain)
-
-Hero.propTypes = {
-
-};
 
 
 export default Hero;

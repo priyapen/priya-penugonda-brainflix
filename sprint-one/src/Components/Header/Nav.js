@@ -11,8 +11,10 @@ class Nav extends Component {
             <nav className="nav">
                 <Logo />
                 <Search />
-                <Upload />
-                <Userimg />
+                <div className="nav__btnimg">
+                    <Upload />
+                    <Userimg />
+                </div>
             </nav>
             
     
