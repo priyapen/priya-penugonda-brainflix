@@ -4,7 +4,6 @@ import './partials/_global.scss';
 import Header from './Components/Header/Header';
 import Main from './Components/Main/Main';
 import videodetails from './data/video-details.json';
-// import Hero from './Components/Main/Hero/Hero';
 
 
 class App extends Component {
@@ -13,6 +12,8 @@ class App extends Component {
     currentHeroVideo: videodetails[0].id,
     currentHeroObject: videodetails[0]
   }
+
+  // I found a bug but i'm not sure how to fix it. On clicking the image in the video list, the Hero image gets changed, however I have to click on the video list image once again to remove it from Next Video section. :(
 
   handleclick = (event, id) => {
     event.preventDefault();
@@ -25,8 +26,6 @@ class App extends Component {
         console.log(video.id, i);
         return video;
       }
-      // video.id !== clickedVideo && 
-        // video.id ! == clickedVideo;
     })
     console.log("new state", newArray)
     console.log("i've been clicked", clickedVideo)
@@ -39,9 +38,9 @@ class App extends Component {
 
     const clickedvideoObj = Object.assign({},...clickedvideo)
 
-    console.log("new hero is", clickedvideoObj)
-
-   console.log("i've been clicked", clickedVideo)
+  //   console.log("new hero is", clickedvideoObj)
+  //  console.log("i've been clicked", clickedVideo)
+    
     this.setState({
       videodetails:newArray,
       currentHeroVideo: clickedVideo,

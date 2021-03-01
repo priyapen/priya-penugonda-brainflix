@@ -1,10 +1,9 @@
 import React from 'react';
-// import uploadicon from '../../Assets/Icons/Icon-upload.svg';
 
 
-const Upload = () => {
+function Upload() {
     return (
-            <a href="" className="nav__upload">Upload</a>
+        <a href="https://anotherpage.com" className="nav__upload">Upload</a>
     );
 }
 

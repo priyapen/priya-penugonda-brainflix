@@ -2,11 +2,10 @@
 import './Aside.scss';
 
 
-
-const AsideListItem = (props) => {
+function AsideListItem(props) {
     return (
 
-            // {/* <li className="">{props.videolistitem.id}</li> */}
+        // {/* <li className="">{props.videolistitem.id}</li> */}
         <li className="video__listitem">
             <ul className="video__image" id={props.id}>
                 <li className="video__imgblk">
@@ -22,12 +21,7 @@ const AsideListItem = (props) => {
             </ul>
         </li>
     );
-};
-
-
-AsideListItem.propTypes = {
-
-};
+}
 
 
 export default AsideListItem;

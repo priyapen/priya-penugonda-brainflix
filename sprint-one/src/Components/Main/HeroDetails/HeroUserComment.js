@@ -1,33 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-
-function HeroUserComment(props) {
-    const commentdate = new Date(props.time).toLocaleDateString('en-US');
+function HeroUserComment({time, id, name,comment}) {
+    const commentdate = new Date(time).toLocaleDateString('en-US');
         return (
-              <ul className="publ__comment" id={props.id}>
+              <ul className="publ__comment" id={id}>
                 <li className="publ__imageblock">
-                    <img className="publ__img"></img>
+                    {/* not adding alt text for user image because the alt text is being displayed instead of a round circle for user image. */}
+                    <img className="publ__img" ></img>
+                    
                 </li>
                 <li className="publ__content">
                     <li className="publ__nametime">
                         <li className="publ__name">
-                        {props.name}
+                        {name}
                         </li>
                         <li className="publ__date">{commentdate}
                         </li>
                     </li>
                     <li className="publ__text">   
-                    {props.comment}
+                    {comment}
                     </li>
                 </li>
             </ul>
         );
 }
-
-
-HeroUserComment.propTypes = {
-
-};
-
 
 export default HeroUserComment;
