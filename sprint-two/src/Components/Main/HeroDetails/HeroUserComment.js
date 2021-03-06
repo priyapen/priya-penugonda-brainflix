@@ -3,10 +3,10 @@ import React from 'react';
 export default function HeroUserComment({time, id, name,comment}) {
     const commentdate = new Date(time).toLocaleDateString('en-US');
         return (
-              <ul className="publ__comment" id={id}>
+              <li className="publ__comment" id={id}>
                 <li className="publ__imageblock">
-                    {/* not adding alt text for user image because the alt text is being displayed instead of a round circle for user image. */}
-                    <img className="publ__img"></img>
+                    {/* not adding alt text for user image because the alt text is being displayed instead of a circle for user image. */}
+                    <img className="publ__img" alt=""></img>
                     
                 </li>
                 <li className="publ__content">
@@ -21,6 +21,6 @@ export default function HeroUserComment({time, id, name,comment}) {
                     {comment}
                     </li>
                 </li>
-            </ul>
+            </li>
         );
 }

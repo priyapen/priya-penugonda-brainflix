@@ -19,7 +19,7 @@ export default function App () {
             <Route path="/" exact component={Main}/>
            
             <Route path="/uploads" exact render={(routerProps) => {
-              return <UploadPage {...routerProps} handlefileupload={this.handlefileupload} />
+              return <UploadPage {...routerProps} />
             }
             } />
             
