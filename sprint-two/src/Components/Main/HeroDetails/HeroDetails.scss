@@ -229,9 +229,9 @@
     }
   }
 
-  &__btn::before {
-    content: none;
-  }
+  // &__btn::before {
+  //   content: none;
+  // }
 
   &__btn:hover {
     background-color: $global-hover;

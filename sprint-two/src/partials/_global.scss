@@ -1,5 +1,5 @@
-@use './variables' as *;
-@use './mixins' as *;
+@import "./variables";
+@import "./mixins";
 
 @font-face {
   font-family: "AvenirNext LT Pro";
@@ -143,11 +143,11 @@ a {
     // margin-left: auto;
   }
 
-  &::before {
-    content: url("../Assets/Icons/Icon-upload.svg");
-    padding-right: 1rem;
-    vertical-align: middle;
-  }
+  // &::before {
+  //   content: url("../Assets/Icons/Icon-upload.svg");
+  //   padding-right: 1rem;
+  //   vertical-align: middle;
+  // }
 }
 
 %button_hover {

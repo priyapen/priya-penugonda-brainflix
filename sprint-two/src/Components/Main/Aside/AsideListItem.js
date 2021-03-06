@@ -7,11 +7,12 @@ export default function AsideListItem(props) {
     return (
 
         // {/* <li className="">{props.videolistitem.id}</li> */}
+        <Link to={`/${props.id}`}>
         <li className="video__listitem">
             <li className="video__image" id={props.id}>
                 <li className="video__imgblk">
-                   
-                    <Link to={`/${props.id}`}><img id={props.id} src={props.imgsrc} alt="video thumbnail" className="video__thumbnail" /></Link>
+                <img id={props.id} src={props.imgsrc} alt="video thumbnail" className="video__thumbnail" />
+                    {/* <Link to={`/${props.id}`}><img id={props.id} src={props.imgsrc} alt="video thumbnail" className="video__thumbnail" /></Link> */}
                     {/* {console.log("id")} */}
                  
                 </li>
@@ -23,7 +24,8 @@ export default function AsideListItem(props) {
                     <h3 className="video__channel">{props.channel}</h3>
                 </li>
             </li>
-        </li>
+            </li>
+            </Link>
     );
 }
 

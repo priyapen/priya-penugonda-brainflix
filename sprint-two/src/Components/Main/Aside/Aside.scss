@@ -57,6 +57,8 @@
 
   &__title {
     @include para_comments;
+    text-align: left;
+    color: $global;
     margin: 0;
     // padding-bottom: 1.6rem;
     font-weight: 600;
@@ -69,6 +71,8 @@
 
   &__channel {
     @include para_comments;
+    text-align: left;
+    color: $global;
     font-weight: 300;
     @include tablet {
       font-size: 1.2rem;

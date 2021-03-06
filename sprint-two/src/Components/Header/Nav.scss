@@ -1,6 +1,6 @@
-@use '../../partials/global' as *;
-@use '../../partials/mixins' as *;
-@use '../../partials/variables' as *;
+@import "../../partials/global";
+@import "../../partials/mixins";
+@import "../../partials/variables";
 
 .nav {
   height: 100%;
@@ -71,6 +71,12 @@
     @include desktop {
       margin-right: 2.4rem;
     }
+  }
+
+  &__upload::before {
+    content: url("../../Assets/Icons/Icon-upload.svg");
+    padding-right: 1rem;
+    vertical-align: middle;
   }
 
   &__upload:hover {

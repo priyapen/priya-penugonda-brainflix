@@ -1,0 +1,39 @@
+@import "../../partials/global";
+@import "../../partials/mixins";
+@import "../../partials/variables";
+@import "../../Components/Main/HeroDetails/HeroDetails.scss";
+@import "../Main/Aside/Aside.scss";
+
+.upl {
+  &__heading {
+    @extend .hero__title;
+  }
+
+  &__thumb {
+    @extend .video__section-title;
+  }
+
+  &__titlelbl {
+    @extend .upl__thumb;
+  }
+
+  &__desclbl {
+    @extend .upl__thumb;
+  }
+
+  &__publbtn {
+    @extend .comment__btn;
+  }
+
+  &__publbtn:hover {
+    background-color: $global-hover;
+    transition: all 1s linear;
+  }
+
+  &__cancel {
+    color: $global-button;
+    @include lists_contact;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
