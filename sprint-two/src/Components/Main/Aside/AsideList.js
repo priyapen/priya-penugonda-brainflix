@@ -2,11 +2,8 @@ import React from 'react';
 import AsideListItem from './AsideListItem';
 import './Aside.scss';
 
-
-function AsideList ({dataFromMain,videodetailslist}) {
+export default function AsideList ({dataFromMain,videodetailslist}) {
         const videolist = dataFromMain;
-    // console.log("video list in aside list",videolist);
-    // console.log(videodetailslist);
 
         return (
                 <ul className="video">
@@ -16,18 +13,13 @@ function AsideList ({dataFromMain,videodetailslist}) {
 
                 {   
                     
-                    // videolist.filter(video => {
-                    //     if (video.id !== videodetailslist.id && videolist.length > 0) console.log(video);
-
-                    // })
-                         videolist.map(video => {  
-                                if (video.id !== videodetailslist.id && videolist.length > 0) {
-                                    // console.log(video);
-                                    // return <AsideListItem key={video.id} id={video.id} videolistitem={video} imgsrc={video.image} channel={video.channel} title={video.title} handleclick={handleclick} />
-                                    return <AsideListItem key={video.id} id={video.id}  imgsrc={video.image} channel={video.channel} title={video.title} />
-                                } 
-                            }
-                            )
+                    videolist.map(video => {  
+                             
+                        if (video.id !== videodetailslist.id && videolist.length > 0) {
+                            return <AsideListItem key={video.id} id={video.id} imgsrc={video.image} channel={video.channel} title={video.title} />
+                        } else return null;
+                        }
+                    )
                      
                 }
                 </ul>       
@@ -35,4 +27,3 @@ function AsideList ({dataFromMain,videodetailslist}) {
         );
 }
 
-export default AsideList;

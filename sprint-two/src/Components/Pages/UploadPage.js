@@ -1,14 +1,13 @@
 import React from 'react';
 
 
-const UploadPage = (props) => {
+export default function UploadPage (props) {
 
-   const  clickedwithinupload = () => {
-    //    console.log("i've been clicked from within the upload page", routerProps);
-    //    alert("form has been submitted");
+    const clickedwithinupload = (event) => {
+        event.preventDefault();
+       alert("form has been submitted");
        props.history.goBack();
    }
-    console.log(props);
     
     return (
         <div>
@@ -16,15 +15,13 @@ const UploadPage = (props) => {
             <p>Video Thumbnail</p>
             <form action="">
                 <label for="" className="upl__titlelbl">Title your video</label>
-                <input type="" placeholder="Add a title to your video" className="upl__title"></input>
+                <input type="text" placeholder="Add a title to your video" className="upl__title" name="vidtitle"></input>
                 <label for="" className="upl__desclbl">Add a video description</label>
                <textarea placeholder="Add a description of your video" className="upl__desc"></textarea>
-                <a className="upl__btn" onClick={props.handlefileupload, clickedwithinupload}>Publish</a>
-                <a className="upl__cancel">Cancel</a>
+                <a className="upl__btn" onClick={ clickedwithinupload}>Publish</a>
+                <a className="upl__cancel" onClick={()=>{props.history.goBack();}}>Cancel</a>
             </form>
         </div>
     );
 };
 
-
-export default UploadPage;

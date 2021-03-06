@@ -1,22 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import HeroCommentHeading from './HeroCommentHeading';
 import Userimg from '../../Header/Userimg';
 import './HeroDetails.scss';
 
-
-
-class HeroCommentInput extends Component {
-    render() {
-        return (
+export default function HeroCommentInput(props) {
+    return (
             <section className="comment">
-                <HeroCommentHeading videodetails={this.props.videodetails}/>
+                <HeroCommentHeading videodetails={props.videodetails}/>
             
                 <article className="comment__block">
                     <div className="comment__imageblock">
                         <Userimg />
                         </div>
                     <div className="comment__detail">
-                    <h3 className="comment__heading">Join the Conversation</h3>
+                    <label className="comment__heading">Join the Conversation</label>
                     <form className="comment__form">
                         <textarea id="comment" className="comment__commenttextinput" cols="30" rows="10" placeholder="Add a new comment" minLength="3"></textarea>
                         
@@ -27,13 +24,4 @@ class HeroCommentInput extends Component {
         </section>
                     
         );
-    }
 }
-
-
-HeroCommentInput.propTypes = {
-
-};
-
-
-export default HeroCommentInput;

@@ -1,18 +1,8 @@
-import React, { Component } from 'react';
+import React  from 'react';
 
 
-class HeroDescription extends Component {
-    render() {
-        return (
-            <p className="hero__description">{this.props.videodetails.description}</p>
-        );
-    }
+export default function HeroDescription (props) {
+    return (
+            <p className="hero__description">{props.videodetails.description}</p>
+    );
 }
-
-
-HeroDescription.propTypes = {
-
-};
-
-
-export default HeroDescription;

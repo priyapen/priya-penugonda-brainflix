@@ -1,6 +1,6 @@
 import React from 'react';
 
-function HeroHeading(props) {
+export default function HeroHeading(props) {
     
         let date = new Date(props.videodetails.timestamp).toLocaleDateString('en-US');
 
@@ -20,8 +20,4 @@ function HeroHeading(props) {
                     </div>
              </section>
         );
-
 }
-
-export default HeroHeading;
-

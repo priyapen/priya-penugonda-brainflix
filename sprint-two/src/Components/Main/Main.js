@@ -1,12 +1,9 @@
-
 import React, { Component } from 'react';
 import AsideList from './Aside/AsideList';
 import Hero from './Hero/Hero';
 import HeroDetails from './HeroDetails/HeroDetails';
 import './Main.scss';
 import axios from 'axios';
-// import UploadPage from './Components/Pages/UploadPage';
-// import VideoDetails from './Components/Pages/VideoDetails';
 
 
 class Main extends Component {
@@ -95,6 +92,5 @@ class Main extends Component {
        
 
 }
-
 
 export default Main;
