@@ -1,0 +1,33 @@
+@import "../../../partials/global";
+@import "../../../partials/mixins";
+@import "../../../partials/variables";
+
+.hero {
+  display: flex;
+  justify-content: center;
+
+  height: 100%;
+
+  &__video-blck {
+    background-color: black;
+    width: 100%;
+    @include tablet {
+      padding: 0 3.4rem;
+      width: 100%;
+    }
+    @include desktop {
+      display: flex;
+      justify-content: center;
+      padding: 0 6.8rem;
+    }
+  }
+
+  &__video {
+    width: 100%;
+    @include desktop {
+      width: 94.4rem;
+      // padding: 0 6.8rem;
+      // margin: auto;
+    }
+  }
+}

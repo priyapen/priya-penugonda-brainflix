@@ -1,0 +1,12 @@
+@import "../../partials/global";
+@import "../../partials/mixins";
+@import "../../partials/variables";
+
+.main {
+  &__content {
+    @include desktop {
+      display: flex;
+      padding: 0 10rem;
+    }
+  }
+}

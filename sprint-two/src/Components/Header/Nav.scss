@@ -1,0 +1,80 @@
+@use '../../partials/global' as *;
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+
+.nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include tablet {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  // &__userimage-block {
+  //   @extend %userimageblock;
+  // }
+
+  &__userimg {
+    @extend %userimg;
+  }
+
+  &__logo {
+    height: 2.8rem;
+  }
+
+  &__search {
+    background: url("../../Assets/Icons/Icon-search.svg") no-repeat;
+    padding: 1rem;
+    width: 100%;
+    line-height: 4rem;
+    border-radius: 4px;
+    border: 1px solid $secondary-accent;
+    height: 4.8rem;
+    background-position: left;
+    background-origin: content-box;
+    text-indent: 2rem;
+    @include tablet {
+      width: 30%;
+      line-height: 4.8rem;
+      margin-left: auto;
+      margin-right: 2.4rem;
+    }
+  }
+
+  &__search:focus {
+    border: 1px solid $global-button;
+    outline: none;
+  }
+
+  &__btnimg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4.8rem;
+    margin-top: 0.8rem;
+    margin-bottom: 1.6rem;
+    @include tablet {
+      height: 100%;
+      align-items: inherit;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__upload {
+    margin-right: 1.6rem;
+    // display: inline;
+    @extend %button;
+    height: 4.8rem;
+    @include desktop {
+      margin-right: 2.4rem;
+    }
+  }
+
+  &__upload:hover {
+    background-color: $global-hover;
+    transition: all 1s linear;
+  }
+}
