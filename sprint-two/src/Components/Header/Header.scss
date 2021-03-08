@@ -5,6 +5,7 @@
 .header {
   @extend %wrapper;
   height: 16.9rem;
+  border-bottom: 1px solid $secondary-accent;
   @include tablet {
     height: 8rem;
     padding-top: 0;

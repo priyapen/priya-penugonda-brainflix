@@ -9,16 +9,28 @@
   @include tablet {
     padding: 0 2.4rem;
   }
+  @include desktop {
+    padding: 0 10rem;
+  }
 
   &__heading {
     @extend .hero__title;
     margin-bottom: 3.2rem;
     padding: 0;
+    border-bottom: 1px solid $secondary-accent;
     @include tablet {
-      border-bottom: 1px solid $secondary-accent;
-      margin-bottom: 0;
-      padding-top: 4.8rem;
+      margin-top: 4.8rem;
+      // padding-top: 4.8rem;
+      padding-top: 0;
       padding-bottom: 3.2rem;
+    }
+    @include desktop {
+      width: 100%;
+    }
+  }
+  &__flex {
+    @include desktop {
+      display: flex;
     }
   }
 
@@ -26,12 +38,15 @@
     @include tablet {
       border-bottom: 1px solid $secondary-accent;
     }
+    // @include desktop {
+    //   display: flex;
+    // }
   }
 
   &__thumb {
     @extend .video__section-title;
     @include tablet {
-      padding-top: 4rem;
+      // padding-top: 4rem;
     }
   }
 
@@ -40,7 +55,7 @@
     height: 15.3rem;
     margin-bottom: 3.2rem;
     @include tablet {
-      padding-bottom: 4rem;
+      // padding-bottom: 4rem;
       width: 34.4rem;
       height: 18.3rem;
     }
@@ -61,6 +76,9 @@
     @include tablet {
       margin-bottom: 2.4rem;
     }
+    @include desktop {
+      display: inline;
+    }
   }
 
   &__desclbl {
@@ -77,8 +95,7 @@
     border: 1px solid $secondary-accent;
     margin-bottom: 3.2rem;
     @include tablet {
-      margin-bottom: 0;
-      padding-bottom: 4rem;
+      margin-bottom: 4rem;
     }
   }
 
@@ -91,7 +108,7 @@
     @include tablet {
       flex-direction: row-reverse;
       margin-top: 4rem;
-      align-items: center;
+      align-items: last baseline;
       justify-content: end;
     }
   }
