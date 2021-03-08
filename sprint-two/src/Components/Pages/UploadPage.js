@@ -5,11 +5,24 @@ import thumbnail from '../../Assets/Images/Upload-video-preview.jpg';
 
 export default function UploadPage (props) {
 
-    const clickedwithinupload = (event) => {
+    const handlePublish = (event) => {
         event.preventDefault();
-       alert("form has been submitted");
+       alert("Video has been uploaded successfully. Taking you back to the home page.");
        props.history.goBack();
-   }
+    }
+    
+    const handleCancel = (event) => {
+        event.preventDefault();
+        // confirm("Would you like to cancel and return to the homepage? Press OK to return to Home Page or Cancel to stay on this page");
+        let confirmation = window.confirm("Press OK to return to Home Page or Cancel to stay on this page");
+        if(confirmation === true ) {
+            props.history.goBack();
+          } else {
+            return;
+          }
+    //    props.history.goBack();
+    }
+
     
     return (
         <section className="upl">
@@ -27,8 +40,9 @@ export default function UploadPage (props) {
                 </form>
             </div>
             <div className="upl__buttons">
-                <p className="upl__publbtn" onClick={ clickedwithinupload}>Publish</p>
-                <p className="upl__cancel" onClick={()=>{props.history.goBack();}}>Cancel</p>
+                <p className="upl__publbtn" onClick={ handlePublish}>Publish</p>
+                {/* <p className="upl__cancel" onClick={() => { props.history.goBack(); }}>Cancel</p> */}
+                <p className="upl__cancel" onClick={handleCancel}>Cancel</p>
             </div>
         </section>
     );
