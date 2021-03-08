@@ -26,7 +26,6 @@
     @include tablet {
       border-bottom: 1px solid $secondary-accent;
       margin-top: 4.8rem;
-      // padding-top: 4.8rem;
       padding-top: 0;
       padding-bottom: 3.2rem;
     }
@@ -56,9 +55,6 @@
 
   &__imgblck {
     @include desktop {
-      // display: flex;
-      // flex-direction: column;
-      // align-items: flex-start;
       margin-right: 2.4rem;
     }
   }
@@ -66,7 +62,6 @@
   &__thumb {
     @extend .video__section-title;
     @include tablet {
-      // padding-top: 4rem;
     }
     @include desktop {
       margin: 0;
@@ -80,7 +75,6 @@
     height: 15.3rem;
     margin-bottom: 3.2rem;
     @include tablet {
-      // padding-bottom: 4rem;
       width: 34.4rem;
       height: 18.3rem;
     }
@@ -148,8 +142,6 @@
     cursor: pointer;
     @include tablet {
       width: 16rem;
-      // margin-top: 4rem;
-      // margin-left: 4.8rem;
     }
   }
 
