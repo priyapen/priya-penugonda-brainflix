@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
-const uniqid = require('uuid');
+const {v4 : uuidv4} = require('uuid');
 
 console.log("hello from videoRoutes!");
 
@@ -11,15 +11,15 @@ console.log("hello from videoRoutes!");
 //     next();
 // })
 
-router.get("/videos", (req, res) => {
-    console.log(res);
+router.get("/", (req, res) => {
+    // console.log(res);
     const videoList = fs.readFileSync("./data/videos.json");
     const parsedData = JSON.parse(videoList);
     res.json(parsedData);
-})
+});
 
-router.get("/videos/:id", (req, res) => {
-    console.log(res);
+router.get("/:id", (req, res) => {
+    // console.log(res);
     const videoList = fs.readFileSync("./data/video-details.json");
     const parsedData = JSON.parse(videoList);
     // const arrData = res.json(parsedData);
@@ -29,7 +29,24 @@ router.get("/videos/:id", (req, res) => {
         }
     });
     res.json(findObj);
-})
+});
 
+
+router.post("/", (req, res) => {
+    console.log(req.body);
+    const newVid = {
+        id: uuidv4(),
+        title: req.body.title,
+        description: req.body.description,
+        image: './files/Upload-video-preview.jpg'
+    }
+    console.log(newVid);
+    const videoList = fs.readFileSync("./data/videos.json");
+    const parsedData = JSON.parse(videoList);
+    console.log(parsedData);
+    parsedData.push(newVid);
+    fs.writeFileSync('./data/videos.json', JSON.stringify(parsedData));
+    res.json(newVid);
+});
 
 module.exports = router;

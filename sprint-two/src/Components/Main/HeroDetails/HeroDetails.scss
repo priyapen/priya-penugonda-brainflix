@@ -4,7 +4,7 @@
 
 .hero {
   &__details {
-    @extend %wrapper;
+    // @extend %wrapper;
     @include tablet {
       max-width: unset;
       margin: 0;
@@ -20,7 +20,8 @@
     flex-direction: column;
     margin-top: 3.2rem;
     margin-bottom: 2.4px;
-    @extend %dividerline;
+    // @extend %dividerline;
+    border-bottom: 1px solid #e1e1e1;
     @include tablet {
       flex-direction: row;
       flex-wrap: wrap;

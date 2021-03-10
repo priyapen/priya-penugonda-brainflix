@@ -15,9 +15,15 @@ class Main extends Component {
    
       // api key = c6c6837c-64b3-493e-9875-9c58e34e299e
     
-    componentDidMount() { 
-        axios.get('https://project-2-api.herokuapp.com/videos?api_key=c6c6837c-64b3-493e-9875-9c58e34e299e')
-        .then((result => {
+    componentDidMount() {
+            // axios.get("http://localhost:8080/").then((response) => {
+            //     this.setState({ videodetails: response.data });
+            // });
+        
+
+        axios.get('http://localhost:8080/videos')
+            .then((result => {
+                console.log("this is result from localhost:8080", result);
             this.setState({
                 videodetails: result.data,
            })
