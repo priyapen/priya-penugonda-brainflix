@@ -1,0 +1,349 @@
+@import "../../../partials/global";
+@import "../../../partials/mixins";
+@import "../../../partials/variables";
+
+.hero {
+  &__details {
+    @extend %wrapper;
+    @include tablet {
+      max-width: unset;
+      margin: 0;
+    }
+    @include desktop {
+      width: 71.2rem;
+      margin-right: 2.4rem;
+      padding: 0;
+    }
+  }
+  &__heading-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3.2rem;
+    margin-bottom: 2.4px;
+    @extend %dividerline;
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    @include desktop {
+      width: 71.2rem;
+    }
+  }
+
+  &__title {
+    @include font24-60;
+    margin: 0;
+    @include desktop {
+      width: 71.2rem;
+    }
+  }
+
+  &__channeldate {
+    display: flex;
+    align-items: center;
+    @include tablet {
+      width: 50%;
+    }
+  }
+
+  &__channel {
+    @include font24-36;
+    padding-right: 0.8rem;
+  }
+
+  &__date {
+    @include para_comments;
+    color: $primary-accent;
+  }
+
+  &__viewslikes {
+    display: flex;
+    align-items: center;
+    padding-top: 3.2rem;
+    padding-bottom: 2.4rem;
+    @include desktop {
+      padding-right: 3.2rem;
+    }
+  }
+
+  &__views {
+    @include para_comments;
+    padding-right: 2.4rem;
+    display: flex;
+  }
+
+  &__views::before {
+    content: url("../../../Assets/Icons/Icon-views.svg");
+    padding-right: 0.8rem;
+  }
+
+  &__likes {
+    @extend .hero__views;
+    @include tablet {
+      padding-right: 0;
+    }
+  }
+
+  &__likes::before {
+    content: url("../../../Assets/Icons/Icon-likes.svg");
+    padding-right: 0.8rem;
+  }
+
+  &__description {
+    @include para_comments;
+    padding-top: 2.4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.comment {
+  &__title {
+    @extend .hero__channel;
+    padding-bottom: 3.2rem;
+  }
+
+  &__heading {
+    @include subheader;
+    color: $primary-accent;
+    // padding: 3.2rem 0 4rem 0;
+    text-transform: uppercase;
+    margin: 0;
+    @include tablet {
+      padding: 0;
+      margin: 0;
+    }
+    @include desktop {
+      padding: 0;
+    }
+  }
+
+  &__block {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid $secondary-accent;
+    @include tablet {
+      justify-content: start;
+      //   width: 52.8rem;
+      //   margin: auto;
+    }
+  }
+
+  &__imageblock {
+    padding-top: 1.8rem;
+    margin-right: 2rem;
+    @include tablet {
+      align-self: self-end;
+      padding-bottom: 2.4rem;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &__img {
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+    object-position: center;
+    object-fit: fill;
+  }
+
+  &__form > * {
+    display: inline;
+  }
+
+  //   &__nameinput {
+  //     height: 4.8rem;
+  //     width: 22.4rem;
+  //     border: 0.1rem solid $secondary-accent;
+  //     border-radius: 4px;
+  //     margin-bottom: 2.4rem;
+  //     font-family: $fontstack;
+  //     color: $global;
+  //     @include para_comments;
+  //     padding: 1.6rem;
+  //     @include tablet {
+  //       width: 46rem;
+  //     }
+  //   }
+
+  //   &__nameinput:focus {
+  //     border: 1px solid $global;
+  //     outline: none;
+  //   }
+
+  //   &__nameinput:active {
+  //     border: 1px solid $global;
+  //     outline: none;
+  //   }
+
+  &__form {
+    @include tablet {
+      display: flex;
+      width: 100%;
+    }
+  }
+
+  &__commenttextinput {
+    height: 9.6rem;
+    width: 100%;
+    resize: none;
+    border: 0.1rem solid $secondary-accent;
+    border-radius: 4px;
+    font-family: $fontstack;
+    color: $global;
+    outline: none;
+    @include para_comments;
+    padding: 1.6rem;
+    @include tablet {
+      width: 44rem;
+      height: 4.8rem;
+      padding: 1rem;
+      margin-right: 1.6rem;
+    }
+    @include desktop {
+      width: 43.6rem;
+    }
+  }
+
+  &__commenttextinput:focus {
+    border: 1px solid $global-button;
+    outline: none;
+  }
+
+  &__commenttextlabel {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $primary-accent;
+    @include labels;
+    margin-bottom: 0.8rem;
+  }
+
+  &__btn {
+    @extend %button;
+    height: 4.8rem;
+    width: 100%;
+    max-width: 100%;
+    @include tablet {
+      width: 16rem;
+    }
+  }
+
+  // &__btn::before {
+  //   content: none;
+  // }
+
+  &__btn:hover {
+    background-color: $global-hover;
+    transition: all 1s linear;
+  }
+}
+
+.publ {
+  @include tablet {
+    width: 52.8rem;
+    margin: auto;
+  }
+
+  &__comment {
+    @extend .comment__block;
+    margin: 2.4rem 0;
+
+    @include tablet {
+      justify-content: left;
+    }
+  }
+
+  &__imageblock {
+    @extend .comment__imageblock;
+    padding-top: 0;
+    @include desktop {
+      align-self: unset;
+    }
+  }
+
+  &__img {
+    @extend .comment__img;
+    background-color: $primary-accent;
+    border-radius: 50%;
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__detail {
+    margin: 2.4rem 0;
+  }
+
+  &__nametime {
+    display: flex;
+    justify-content: space-between;
+    @include tablet {
+      justify-content: unset;
+    }
+  }
+
+  &__name {
+    @include para_comments;
+    margin: 0;
+    padding-bottom: 1.6rem;
+    font-weight: 600;
+    @include tablet {
+      margin-right: 1.2rem;
+    }
+  }
+
+  &__date {
+    @include para_comments;
+  }
+
+  &__text {
+    @include para_comments;
+    margin: 0;
+    border-bottom: none;
+    @include tablet {
+      padding-bottom: 1.6rem;
+    }
+  }
+
+  // &__likedel {
+  //   width: 8rem;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: space-between;
+  //   margin: 1rem 0;
+  //   // margin-left: auto;
+  //   // flex-direction: column;
+  //   // height: 100%;
+  // }
+
+  // &__delete {
+  //   font-size: 2rem;
+  //   color: $global;
+  //   cursor: pointer;
+  // }
+
+  // &__like {
+  //   display: inline-block;
+  //   font-size: 2rem;
+  //   color: $global;
+  //   margin-left: auto;
+  //   cursor: pointer;
+  //   // fill: black;
+  // }
+
+  // &__like:hover {
+  //   color: $accent-hover;
+  // }
+
+  // &__like--active {
+  //   color: $accent-hover;
+  // }
+
+  // &__likeCount {
+  //   font-size: 1.6rem;
+  //   position: relative;
+  //   top: 0.1rem;
+  // }
+}
