@@ -33,19 +33,22 @@ router.get("/:id", (req, res) => {
 
 
 router.post("/", (req, res) => {
-    console.log(req.body);
-    const newVid = {
-        id: uuidv4(),
-        title: req.body.title,
-        description: req.body.description,
-        image: './files/Upload-video-preview.jpg'
-    }
-    console.log(newVid);
+    console.log("this is the req body", req.body);
+    const newVid = req.body;
+    newVid.image = "http://localhost:8080/files/Upload-video-preview.jpg";
+    // console.log(newVid);
     const videoList = fs.readFileSync("./data/videos.json");
     const parsedData = JSON.parse(videoList);
     console.log(parsedData);
     parsedData.push(newVid);
     fs.writeFileSync('./data/videos.json', JSON.stringify(parsedData));
+
+
+    // const newVidDet = {
+
+    // }
+
+
     res.json(newVid);
 });
 

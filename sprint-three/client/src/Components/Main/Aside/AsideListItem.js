@@ -4,6 +4,8 @@ import './Aside.scss';
 
 
 export default function AsideListItem(props) {
+    console.log(props.imgsrc);
+    
     return (
 
         // {/* <li className="">{props.videolistitem.id}</li> */}

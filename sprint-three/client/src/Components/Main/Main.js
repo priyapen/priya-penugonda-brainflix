@@ -28,7 +28,7 @@ class Main extends Component {
                 videodetails: result.data,
            })
             const id = result.data[0].id;
-          axios.get(`https://project-2-api.herokuapp.com/videos/${id}?api_key=c6c6837c-64b3-493e-9875-9c58e34e299e`)
+          axios.get(`http://localhost:8080/videos/${id}`)
                     .then((vidresult) => {
                       this.setState({
                             currentHeroObject: vidresult.data,
@@ -46,7 +46,7 @@ class Main extends Component {
             if (!currvidid) {
                 currvidid = this.state.videodetails[0].id;
             }
-                axios.get(`https://project-2-api.herokuapp.com/videos/${currvidid}?api_key=c6c6837c-64b3-493e-9875-9c58e34e299e`).then(result => {
+                axios.get(`https://localhost:8080/videos/${currvidid}`).then(result => {
                     // console.log(result.data);
                     this.setState({
                         currentHeroObject: result.data,
