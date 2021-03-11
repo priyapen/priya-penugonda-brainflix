@@ -40,13 +40,14 @@ class Main extends Component {
      
     componentDidUpdate(prevProps, prevState) {
         let currvidid = this.props.match.params.videoid;
-
+        console.log("current vid id:", currvidid);
+        console.log("previous vid id", prevProps.match.params.videoid);
         if (prevProps.match.params.videoid !== currvidid) {
         
             if (!currvidid) {
                 currvidid = this.state.videodetails[0].id;
             }
-                axios.get(`https://localhost:8080/videos/${currvidid}`).then(result => {
+                axios.get(`http://localhost:8080/videos/${currvidid}`).then(result => {
                     // console.log(result.data);
                     this.setState({
                         currentHeroObject: result.data,
