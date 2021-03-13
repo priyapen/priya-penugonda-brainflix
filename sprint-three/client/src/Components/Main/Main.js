@@ -24,7 +24,7 @@ class Main extends Component {
            })
                let id = (!this.props.match.params.videoid) ? result.data[0].id :  this.props.match.params.videoid;
                 // console.log("id", id);
-                let currvidid = this.props.match.params.videoid;
+                // let currvidid = this.props.match.params.videoid;
                 // console.log("current vid id:", currvidid);
                 axios.get(`http://localhost:8080/videos/${id}`)
                     .then((vidresult) => {

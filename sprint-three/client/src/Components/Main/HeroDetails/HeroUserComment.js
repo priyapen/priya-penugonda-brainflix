@@ -4,23 +4,23 @@ export default function HeroUserComment({time, id, name,comment}) {
     const commentdate = new Date(time).toLocaleDateString('en-US');
         return (
               <li className="publ__comment" id={id}>
-                <li className="publ__imageblock">
+                <div className="publ__imageblock">
                     {/* not adding alt text for user image because the alt text is being displayed instead of a circle for user image. */}
                     <img className="publ__img" alt=""></img>
                     
-                </li>
-                <li className="publ__content">
-                    <li className="publ__nametime">
-                        <li className="publ__name">
+                </div>
+                {/* <li className="publ__content"> */}
+                    <div className="publ__nametime">
+                    <p className="publ__name">
                         {name}
-                        </li>
-                        <li className="publ__date">{commentdate}
-                        </li>
-                    </li>
-                    <li className="publ__text">   
+                        </p>
+                    <p className="publ__date">{commentdate}
+                        </p>
+                    </div>
+                    <p className="publ__text">   
                     {comment}
-                    </li>
-                </li>
+                    </p>
+                {/* </li> */}
             </li>
         );
 }

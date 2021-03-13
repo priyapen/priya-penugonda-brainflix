@@ -12,10 +12,6 @@
     align-items: center;
   }
 
-  // &__userimage-block {
-  //   @extend %userimageblock;
-  // }
-
   &__userimg {
     @extend %userimg;
   }
@@ -34,6 +30,7 @@
     height: 4.8rem;
     background-position: left;
     background-origin: content-box;
+    background-color: #e1e1e13f;
     text-indent: 2rem;
     @include tablet {
       width: 30%;
