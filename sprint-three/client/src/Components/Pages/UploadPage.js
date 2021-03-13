@@ -13,6 +13,7 @@ class UploadPage extends Component {
             title: "",
             description: "",
             isPublished: false,
+            isCancelled: false,
         };
         this.handletitle = this.handletitle.bind(this);
         this.handledesc = this.handledesc.bind(this);
@@ -23,7 +24,7 @@ class UploadPage extends Component {
 
    handlePublish= (event)=> {
         event.preventDefault();
-       alert("Video has been uploaded successfully. Taking you back to the home page.");
+    //    alert("Video has been uploaded successfully. Taking you back to the home page.");
        console.log(this.state);
     //    console.log(event.target.value);
        this.setState({
@@ -50,6 +51,13 @@ class UploadPage extends Component {
           } else {
             return;
           }
+        // this.setState({
+        //     isCancelled: true
+        //    }, () => {
+        //     // console.log(this.state.id);
+        //        console.log(this.state);
+        //     //    this.postFormData();
+        //    });
     //    props.history.goBack();
     }
 
@@ -85,7 +93,10 @@ class UploadPage extends Component {
     }
 
     render() {
+        
         return (
+
+            (!this.state.isPublished) ? 
             <section className="upl">
                 <h1 className="upl__heading">Upload Video</h1>
                 <div className="upl__flex">
@@ -107,7 +118,7 @@ class UploadPage extends Component {
                         </form>
                         </div>
                         </div>
-            </section>
+            </section> : <p className="upl__publmsg">Video published successfully, taking you back to the homepage!</p>
         );
     }
     

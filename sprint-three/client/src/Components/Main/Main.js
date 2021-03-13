@@ -16,32 +16,32 @@ class Main extends Component {
       // api key = c6c6837c-64b3-493e-9875-9c58e34e299e
     
     componentDidMount() {
-            // axios.get("http://localhost:8080/").then((response) => {
-            //     this.setState({ videodetails: response.data });
-            // });
-        
-
         axios.get('http://localhost:8080/videos')
             .then((result => {
-                console.log("this is result from localhost:8080", result);
+                // console.log("this is result from localhost:8080", result);
             this.setState({
                 videodetails: result.data,
            })
-            const id = result.data[0].id;
-          axios.get(`http://localhost:8080/videos/${id}`)
+               let id = (!this.props.match.params.videoid) ? result.data[0].id :  this.props.match.params.videoid;
+                // console.log("id", id);
+                let currvidid = this.props.match.params.videoid;
+                // console.log("current vid id:", currvidid);
+                axios.get(`http://localhost:8080/videos/${id}`)
                     .then((vidresult) => {
-                      this.setState({
+                        this.setState({
                             currentHeroObject: vidresult.data,
+                        })
                     })
-                    })
-        }))
+                    // .then(() => console.log("current hero obejct is", this.state.currentHeroObject));
+            }))
+        
      }
 
      
     componentDidUpdate(prevProps, prevState) {
         let currvidid = this.props.match.params.videoid;
-        console.log("current vid id:", currvidid);
-        console.log("previous vid id", prevProps.match.params.videoid);
+        // console.log("current vid id:", currvidid);
+        // console.log("previous vid id", prevProps.match.params.videoid);
         if (prevProps.match.params.videoid !== currvidid) {
         
             if (!currvidid) {
