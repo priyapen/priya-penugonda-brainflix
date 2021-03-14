@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.scss';
 import './partials/_global.scss';
 import Header from './Components/Header/Header';
 import Main from './Components/Main/Main';
@@ -8,7 +7,6 @@ import UploadPage from './Components/Pages/UploadPage';
 
 
 export default function App () {
-
     return (
       <div className="app">
         <BrowserRouter>

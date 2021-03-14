@@ -8,7 +8,6 @@
     margin: 0;
   }
   @include desktop {
-    width: 32rem;
     padding: 0;
   }
 
@@ -50,6 +49,7 @@
     height: 7rem;
     border-radius: 4px;
     margin-right: 1.6rem;
+    object-fit: cover;
   }
 
   &__titlechan-block {

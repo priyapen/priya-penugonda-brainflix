@@ -1,4 +1,4 @@
-@import './variables';
+@import "./variables";
 
 @mixin tablet {
   @media only screen and (min-width: 768px) {
@@ -31,7 +31,7 @@
   line-height: 3.2rem;
   font-weight: 600;
   @include tablet {
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 4.4rem;
   }
 }
@@ -54,7 +54,7 @@
   line-height: 1.8rem;
   font-weight: 600;
   @include tablet {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 2.4rem;
   }
 }

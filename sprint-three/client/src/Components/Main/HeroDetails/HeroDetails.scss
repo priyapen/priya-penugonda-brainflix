@@ -49,6 +49,7 @@
   &__channel {
     @include font24-36;
     padding-right: 0.8rem;
+    font-size: 1.6rem;
   }
 
   &__date {
@@ -61,8 +62,10 @@
     align-items: center;
     padding-top: 3.2rem;
     padding-bottom: 2.4rem;
-    @include desktop {
+    @include tablet {
       padding-right: 3.2rem;
+      padding-top: 0;
+      padding-bottom: 0;
     }
   }
 
