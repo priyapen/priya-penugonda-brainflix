@@ -15,11 +15,14 @@ export default function HeroUserComment({time, id, name,comment}) {
                         {name}
                         </p>
                     <p className="publ__date">{commentdate}
-                        </p>
-                    </div>
+                    </p>
                     <p className="publ__text">   
                     {comment}
                     </p>
+                    </div>
+                    {/* <p className="publ__text">   
+                    {comment}
+                    </p> */}
                 {/* </li> */}
             </li>
         );

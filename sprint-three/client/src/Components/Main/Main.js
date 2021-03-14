@@ -59,22 +59,30 @@ class Main extends Component {
 
  
     render() {
-        if (Object.entries(this.state.currentHeroObject).length === 0) {
-            return null;
-        } else 
+        // if (Object.entries(this.state.currentHeroObject).length === 0) {
+        //     return (<p>Loading content...</p>);
+        // } else 
         return (
-        <main className="main">
-            <Hero 
-                  videodetailslist={this.state.currentHeroObject} /> 
+        <>
+            {
+                !Object.entries(this.state.currentHeroObject).length ?
+                    <h2>Loading content...</h2>
+                    :
+            
+                    <main className="main">
+                        <Hero
+                            videodetailslist={this.state.currentHeroObject} />
               
-                <div className="main__content">
-                    {this.state.currentHeroObject &&  <HeroDetails  videodetailslist={this.state.currentHeroObject} />}
+                        <div className="main__content">
+                            {this.state.currentHeroObject && <HeroDetails videodetailslist={this.state.currentHeroObject} />}
                  
                   
         
-                <AsideList dataFromMain={this.state.videodetails} videodetailslist={this.state.currentHeroObject} />
-            </div>
-        </main>
+                            <AsideList dataFromMain={this.state.videodetails} videodetailslist={this.state.currentHeroObject} />
+                        </div>
+                    </main>
+                }
+                </>
     );
  }
 }

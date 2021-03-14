@@ -110,6 +110,8 @@
     // padding: 3.2rem 0 4rem 0;
     text-transform: uppercase;
     margin: 0;
+    width: 100%;
+    // flex-grow: 2;
     @include tablet {
       padding: 0;
       margin: 0;
@@ -249,6 +251,7 @@
   &__comment {
     @extend .comment__block;
     margin: 2.4rem 0;
+    padding-bottom: 1.6rem;
 
     @include tablet {
       justify-content: left;
@@ -258,7 +261,7 @@
   &__imageblock {
     @extend .comment__imageblock;
     padding-top: 0;
-    @include desktop {
+    @include tablet {
       align-self: unset;
     }
   }
@@ -280,6 +283,7 @@
   &__nametime {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     @include tablet {
       justify-content: unset;
     }
@@ -302,10 +306,10 @@
   &__text {
     @include para_comments;
     margin: 0;
-    border-bottom: none;
-    @include tablet {
-      padding-bottom: 1.6rem;
-    }
+    border-bottom: 1.6rem;
+    // @include tablet {
+    //   padding-bottom: 1.6rem;
+    // }
   }
 
   // &__likedel {

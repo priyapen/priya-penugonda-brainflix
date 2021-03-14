@@ -13,8 +13,9 @@ export default function HeroCommentInput(props) {
                         <Userimg />
                         </div>
                     <div className="comment__detail">
-                    <label className="comment__heading">Join the Conversation</label>
+                    {/* <label className="comment__heading">Join the Conversation</label> */}
                     <form className="comment__form">
+                        <label className="comment__heading">Join the Conversation</label>
                         <textarea id="comment" className="comment__commenttextinput" cols="30" rows="10" placeholder="Add a new comment" minLength="3"></textarea>
                         
                         <button type="submit" className="comment__btn">Comment</button>
