@@ -4,34 +4,20 @@ const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
 const LoremIpsum = require('lorem-ipsum');
 
-console.log("hello from videoRoutes!");
-
-// middleware
-// router.use((req, res, next) => {
-//     console.log("this is usage of router");
-//     next();
-// })
 
 router.get("/videos", (req, res) => {
-    // console.log(res);
     const videoList = fs.readFileSync("./data/video-details.json");
-    console.log(videoList);
     const parsedData = JSON.parse(videoList);
-    console.log("parsedData from video-details", parsedData);
     let extObjectArr = parsedData.map(element => {
         const { description, views, likes, duration, video, timestamp, comments, ...newObject } = element;
-        console.log("newObject from logging line 23:", newObject);
         return newObject;
     });
-    // console.log("extObject console logged", extObject);
     res.json(extObjectArr);
 });
 
 router.get("/videos/:id", (req, res) => {
-    // console.log(res);
     const videoList = fs.readFileSync("./data/video-details.json");
     const parsedData = JSON.parse(videoList);
-    // const arrData = res.json(parsedData);
     const findObj = parsedData.find(obj => {
         if (obj.id === req.params.id) {
             return obj;
@@ -44,20 +30,8 @@ router.get("/videos/:id", (req, res) => {
 router.post("/videos", (req, res) => {
     console.log("this is the req body", req.body);
     const newVid = req.body;
-    const imgpath = "http://localhost:8080/files/Upload-video-preview.jpg"
-    // newVid.image = imgpath;
-    // newVid.channel = "Pri vlogs";
-    // console.log(newVid);
-    // const videoList = fs.readFileSync("./data/videos.json");
-    // const parsedData = JSON.parse(videoList);
-    // console.log(parsedData);
-    // parsedData.push(newVid);
-    // fs.writeFileSync('./data/videos.json', JSON.stringify(parsedData));
-
-    console.log("short viddetail object is- this is:", newVid);
     const newVidDet = {
         channel: "Pri vlogs",
-        image: imgpath,
         views: 0,
         likes: 0,
         duration: "4:01",
@@ -88,14 +62,10 @@ router.post("/videos", (req, res) => {
         ]
       }
     const vidDetail = Object.assign(newVid, newVidDet);
-    console.log("viddetails after newVid and viddetails are combined",vidDetail);
     const videoDetailsList = fs.readFileSync("./data/video-details.json");
     const parsedDetailData = JSON.parse(videoDetailsList);
-    // console.log(parsedDetailData);
     parsedDetailData.push(vidDetail);
     fs.writeFileSync('./data/video-details.json', JSON.stringify(parsedDetailData));
-    // res.json(newVid);
-    console.log("logging from line 101:", vidDetail);
     res.json(vidDetail);
 });
 

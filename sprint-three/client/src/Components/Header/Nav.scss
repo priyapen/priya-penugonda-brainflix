@@ -62,9 +62,12 @@
 
   &__upload {
     margin-right: 1.6rem;
-    // display: inline;
+    width: 76%;
     @extend %button;
     height: 4.8rem;
+    @include tablet {
+      width: 60%;
+    }
     @include desktop {
       margin-right: 2.4rem;
     }

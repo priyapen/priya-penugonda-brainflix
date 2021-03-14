@@ -9,7 +9,6 @@ export default function HeroUserComment({time, id, name,comment}) {
                     <img className="publ__img" alt=""></img>
                     
                 </div>
-                {/* <li className="publ__content"> */}
                     <div className="publ__nametime">
                     <p className="publ__name">
                         {name}
@@ -20,10 +19,6 @@ export default function HeroUserComment({time, id, name,comment}) {
                     {comment}
                     </p>
                     </div>
-                    {/* <p className="publ__text">   
-                    {comment}
-                    </p> */}
-                {/* </li> */}
             </li>
         );
 }

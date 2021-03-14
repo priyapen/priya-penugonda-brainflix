@@ -41,7 +41,6 @@ html {
 
 body {
   margin: 0;
-  padding: 1.6rem 0;
   width: 100%;
 }
 
@@ -119,7 +118,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 77%;
   background-color: $global-button;
   color: $global-light;
   font-weight: 600;
@@ -127,27 +125,16 @@ a {
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
-  // padding: 2rem;
   @include lists_contact;
   border-radius: 4px;
   border: none;
   flex-shrink: 0;
-  // padding: 1.2rem 8rem;
   margin: 1.6rem 0;
-  max-width: 28.8rem;
   @include tablet {
-    width: auto;
     padding: 1rem;
     margin: 0;
     height: 4.8rem;
-    // margin-left: auto;
   }
-
-  // &::before {
-  //   content: url("../Assets/Icons/Icon-upload.svg");
-  //   padding-right: 1rem;
-  //   vertical-align: middle;
-  // }
 }
 
 %button_hover {
@@ -191,10 +178,6 @@ textarea::placeholder {
     line-height: 2.6rem;
   }
 }
-
-// %userimageblock {
-//   // margin-right: 2rem;
-// }
 
 %userimg {
   width: 4.8rem;

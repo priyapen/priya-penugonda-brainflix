@@ -13,8 +13,7 @@ export default function AsideList ({dataFromMain,videodetailslist}) {
 
                 {   
                     
-                    videolist.map(video => {  
-                             
+                    videolist.map(video => {       
                         if (video.id !== videodetailslist.id && videolist.length > 0) {
                             return <AsideListItem key={video.id} id={video.id} imgsrc={video.image} channel={video.channel} title={video.title} />
                         } else return null;

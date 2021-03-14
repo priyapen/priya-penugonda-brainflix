@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './UploadPage.scss';
-// import thumbnail from '../../Assets/Images/Upload-video-preview.jpg';
 import {v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 
@@ -24,15 +23,11 @@ class UploadPage extends Component {
 
    handlePublish= (event)=> {
         event.preventDefault();
-    //    alert("Video has been uploaded successfully. Taking you back to the home page.");
        console.log(this.state);
-    //    console.log(event.target.value);
        this.setState({
         id: uuidv4(),
         isPublished: true
        }, () => {
-        // console.log(this.state.id);
-        //    console.log(this.state);
            this.postFormData();
        });
        setTimeout(() => {
@@ -42,36 +37,28 @@ class UploadPage extends Component {
     
     handleCancel= (event) => {
         event.preventDefault();
-       
         let confirmation = window.confirm("Press OK to return to Home Page or Cancel to stay on this page");
         if(confirmation === true ) {
             this.props.history.goBack();
           } else {
             return;
           }
-      this.props.history.goBack();
     }
 
 
     handletitle(event){
         event.preventDefault();
-        console.log(event.target.value);
-    
         this.setState({
             title:event.target.value,
         })
-        console.log(this.state);
     }
 
 
     handledesc(event){
         event.preventDefault();
-        console.log(event.target.value);
-    
         this.setState({
             description:event.target.value,
         })
-        console.log(this.state);
     }
    
 
@@ -79,29 +66,24 @@ class UploadPage extends Component {
         const publVid = {
             id: this.state.id,
             title: this.state.title,
+            image: "http://localhost:8080/files/Upload-video-preview.jpg",
             description: this.state.description
         }
-        axios.post('http://localhost:8080/videos', publVid).then(response => {
-            console.log(response);
-        })
+        axios.post('http://localhost:8080/videos', publVid)
     }
 
 
     render() {
         return (
-
             (!this.state.isPublished) ? 
             <section className="upl">
                 <h1 className="upl__heading">Upload Video</h1>
-                {/* <div className="upl__flex"> */}
-                    {/* <div className="upl__imgblck">    */}
                      <ul className="upl__flex">
                     <li><form action="" className="upl__form" onSubmit={this.handlePublish}>
                             <li className="upl__imgblck">
                                 <label htmlFor="videoimg" className="upl__thumb">Video Thumbnail</label>
                                 <img name="videoimg" src="http://localhost:8080/files/Upload-video-preview.jpg" className="upl__img" alt="uploaded video" />
                             </li>
-                            {/* </div> */}
                             <li className="upl__titldesc">
                         <label htmlFor="vidtitle" className="upl__titlelbl">Title your video
                         <input type="text" placeholder="Add a title to your video" className="upl__title" name="vidtitle" value={this.state.title} onChange={this.handletitle}></input></label>
@@ -114,14 +96,10 @@ class UploadPage extends Component {
                     </li>
                
                         </form></li>
-                        </ul>  
-                        {/* </div> */}
-                        {/* </div> */}
+                        </ul> 
             </section> : <p className="upl__publmsg">Video published successfully, taking you back to the homepage!</p>
         );
     }
-    
-    
 };
 
 export default UploadPage;

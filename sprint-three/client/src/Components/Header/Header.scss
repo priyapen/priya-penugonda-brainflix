@@ -6,9 +6,12 @@
   @extend %wrapper;
   height: 16.9rem;
   border-bottom: 1px solid $secondary-accent;
+  padding: 1.6rem;
   @include tablet {
     height: 8rem;
-    padding-top: 0;
-    padding-bottom: 1.6rem;
+    padding: 0 2.4rem;
+  }
+  @include desktop {
+    padding: 0 10rem;
   }
 }
