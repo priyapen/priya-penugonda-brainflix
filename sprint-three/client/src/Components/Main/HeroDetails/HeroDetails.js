@@ -6,8 +6,6 @@ import HeroCommPubl from './HeroCommPubl';
 import './HeroDetails.scss';
 
 export default function HeroDetails({videodetailslist}) {
-    
-
         return (
             <section className="hero__details">
                 <HeroHeading videodetails={videodetailslist} />

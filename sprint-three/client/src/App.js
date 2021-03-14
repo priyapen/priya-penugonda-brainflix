@@ -15,7 +15,6 @@ export default function App () {
           <Header />
           
           <Switch>
-
             <Route path="/" exact component={Main}/>
            
             <Route path="/uploads" exact render={(routerProps) => {
@@ -26,7 +25,7 @@ export default function App () {
             <Route path="/:videoid" render={(routerProps) => {
               return <Main  {...routerProps}/>
             }} />
-        </Switch>
+          </Switch>
         </BrowserRouter>
       </div>
     );

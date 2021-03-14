@@ -3,7 +3,6 @@
 @import "../../../partials/variables";
 
 .video {
-  // @extend %wrapper;
   @include tablet {
     width: 35rem;
     margin: 0;
